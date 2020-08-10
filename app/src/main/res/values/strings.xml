@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Luna</string>
+    <string name="name">Name</string>
+    <string name="input">Input</string>
+    <string name="ask_luna">Ask Luna</string>
+    <string name="image">image</string>
+    <string name="logo">logo</string>
+    <string name="reminder">Reminder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notes">NOTES</string>
+    <string name="todo">TODO</string>
+    <string name="_0">0</string>
+    <string name="todoelem">todo</string>
+    <string name="sketch">sketch</string>
+    <string name="create_an_account">Create an account.</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+</resources>

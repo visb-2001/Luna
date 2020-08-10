@@ -1,0 +1,64 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Hey Luna"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "context_set": ""
+        },
+        {"tag": "age",
+         "patterns": ["how old", "how old is luna", "what is your age", "how old are you", "age?"],
+         "responses": ["I don't really have an age. Some say I could be immortal"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["what is your name", "what should I call you", "whats your name?", "who are you?"],
+         "responses": ["You can call me Luna.", "I'm Luna"],
+         "context_set": ""
+        },
+        {"tag": "search",
+         "patterns": ["what is a", "who is", "search for", "find in wikipedia", "what is", "what's","tell me about"],
+         "responses": ["Please wait, Let me fetch that for you.","Working on it right now."],
+         "context_set": ""
+        },
+        {"tag": "note",
+         "patterns": ["make a note", "take this down", "make a note of this", "remember this", "take of note of this"],
+         "responses": ["Sure what do you want this note to contain", "I'm listening"],
+         "context_set": ""
+        },
+        {"tag": "call",
+         "patterns": ["call ", "make a call", "contact"],
+         "responses": ["Making the call right now"],
+         "context_set": ""
+        },
+        {"tag": "timer",
+         "patterns": ["set a timer", "set a timer for", "time for"],
+         "responses": ["Sure"],
+         "context_set": ""
+        },
+        {"tag": "todo",
+         "patterns": ["add this to the todo list", "remind me to finish this by today"],
+         "responses": ["Sure what do you want me to add"],
+         "context_set": ""
+        },
+        {"tag": "joke",
+         "patterns": ["tell me a joke", "make me laugh", "tell me something funny", "make a joke"],
+         "responses": ["One hilarious joke coming right up"],
+         "context_set": ""
+        },
+        {"tag": "rajini",
+         "patterns": ["tell me something about rajini", "give me a rajinikanth fact", "give me fact about super star"],
+         "responses": ["Here it is"],
+         "context_set": ""
+        },
+        {"tag": "weather",
+         "patterns": ["whats the weather like", "should I carry an umbrella", "is it sunny today", "what is the weather like today", "can you get me the weather"],
+         "responses": ["Looking at the sky..."],
+         "context_set": ""
+        }
+
+   ]
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color"
+    tools:context=".fragments.ChatFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatInterface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/Input"
+            android:layout_below="@+id/imageView" />
+
+        <EditText
+            android:id="@+id/Input"
+            android:imeOptions="actionSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="7dp"
+            android:elevation="3dp"
+            android:autofillHints=""
+            android:background="@drawable/bg_input_text"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/ask_luna"
+            android:inputType="text|textAutoCorrect"
+            android:padding="7dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#80FFFFFF"
+            android:textSize="20sp" tools:targetApi="lollipop"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo"
+            android:layout_alignParentTop="true"/>
+
+        <ImageButton
+            android:id="@+id/options"
+            android:layout_width="15dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentEnd="true"
+            android:background="#00FFFFFF"
+            android:src="@drawable/options"
+            android:scaleType="fitCenter"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+</FrameLayout>

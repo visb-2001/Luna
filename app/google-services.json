@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "691220179184",
+    "firebase_url": "https://luna-97ce9.firebaseio.com",
+    "project_id": "luna-97ce9",
+    "storage_bucket": "luna-97ce9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691220179184:android:8025e7f29644a3428a7a35",
+        "android_client_info": {
+          "package_name": "com.example.luna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691220179184-ingc65eakq5otm69af2bu8a8lf94bk1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD77KgjH0ZwDBFdlHK5MUMUcKweh4xbH0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691220179184-ingc65eakq5otm69af2bu8a8lf94bk1d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

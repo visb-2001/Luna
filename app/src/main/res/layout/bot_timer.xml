@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bot_bubble"
+    android:layout_margin="8dp"
+    android:padding="10dp">
+
+    <ProgressBar
+        android:id="@+id/timerBar"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:max="10000"
+        android:progress="10000"
+        android:progressDrawable="@drawable/circle_progressbar"
+        android:rotation="-90">
+    </ProgressBar>
+    <TextView
+        android:id="@+id/timeLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/montserrat"
+        android:textSize="25sp"
+        android:text="@string/_0">
+    </TextView>
+
+
+</RelativeLayout>
