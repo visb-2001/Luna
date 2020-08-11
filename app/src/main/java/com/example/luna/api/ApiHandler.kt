@@ -122,3 +122,56 @@ fun weatherApiCall(woeid: Int,resultHandler: (WeatherApi) -> Unit){
         }
     })
 }
+
+//Yoda
+fun yodaApiCall(input: String,resultHandler: (YodaApi) -> Unit){
+    println("Connecting")
+
+    val bUrl: String = "https://api.funtranslations.com/translate/yoda.json?text"
+    var url = bUrl+input
+
+    val request = Request.Builder().url(url).build()
+
+    val client = OkHttpClient()
+    client.newCall(request).enqueue(object: Callback {
+        override fun onFailure(call: Call, e: IOException) {
+            println("Failed$e")
+        }
+
+        override fun onResponse(call: Call, response: Response) {
+            val body =  response.body?.string()
+            println(body)
+
+            val gson = GsonBuilder().create()
+
+            resultHandler(gson.fromJson(body, YodaApi::class.java))
+        }
+    })
+}
+
+//Jeopardy
+fun jeopardyApiCall(resultHandler: (JeopardyApi) -> Unit){
+    println("Connecting")
+
+    val bUrl: String = "https://jservice.io/api/random"
+    var url = bUrl
+
+    val request = Request.Builder().url(url).build()
+
+    val client = OkHttpClient()
+    client.newCall(request).enqueue(object: Callback {
+        override fun onFailure(call: Call, e: IOException) {
+            println("Failed$e")
+        }
+
+        override fun onResponse(call: Call, response: Response) {
+            val body =  response.body?.string()
+            println(body)
+
+            val gson = GsonBuilder().create()
+            val quizList: List<JeopardyApi> = gson.fromJson(body, Array<JeopardyApi>::class.java).toList()
+            resultHandler(quizList[0])
+        }
+    })
+}
+

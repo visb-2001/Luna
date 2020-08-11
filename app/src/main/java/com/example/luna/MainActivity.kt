@@ -56,14 +56,19 @@ class MainActivity : AppCompatActivity() {
 
 
         //Run once
+
         val preferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-        if(preferences.getBoolean("First_Time",true)){
+        if(preferences.getBoolean("Scheduler",true)){
             Scheduler()
+            preferences.edit().putBoolean("Scheduler",false).apply()
+        }
+        if(preferences.getBoolean("First_Time",true)){
+
             var string = preferences.getString("Current_Date","")
             if(!string.isNullOrEmpty()){
                 Log.d("main",string)
             }
-            //preferences.edit().putBoolean("First_Time",false).apply()
+
         }
         val uid = FirebaseAuth.getInstance().uid
         var ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
@@ -180,7 +185,7 @@ class MainActivity : AppCompatActivity() {
     fun Scheduler(){
         val componentName = ComponentName(this, JobService::class.java)
         val info: JobInfo = JobInfo.Builder(123, componentName)
-            .setPeriodic(3 * 60 * 60 * 1000, 15 * 60 * 1000)
+            .setPeriodic(3 * 60 * 60 * 1000)
             .setPersisted(true)
             .build()
         val scheduler: JobScheduler =

@@ -58,6 +58,31 @@
          "patterns": ["whats the weather like", "should I carry an umbrella", "is it sunny today", "what is the weather like today", "can you get me the weather"],
          "responses": ["Looking at the sky..."],
          "context_set": ""
+        },
+        {"tag": "yoda",
+         "patterns": ["what would yoda say", "convert this to yoda", "tell me what yoda would say"],
+         "responses": ["say, what would yoda"],
+         "context_set": ""
+        },
+        {"tag": "quiz",
+         "patterns": ["ask me a question", "quiz me", "play jeopardy with me", "I'm bored", "Lets play a game"],
+         "responses": ["A Jeopardy question on its way"],
+         "context_set": ""
+        },
+        {"tag": "do",
+         "patterns": ["what can you do", "tell me about what you can do"],
+         "responses": ["I can do various tasks for you, like making notes and adding stuff to the todo list. Try tell me a joke"],
+         "context_set": ""
+        },
+        {"tag": "life",
+         "patterns": ["whats the meaning of life"],
+         "responses": ["Probably nothing, probably 42"],
+         "context_set": ""
+        },
+        {"tag": "thank",
+         "patterns": ["thank you luna","thank you for that"],
+         "responses": ["You're welcome", "It's my pleasure"],
+         "context_set": ""
         }
 
    ]

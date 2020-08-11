@@ -92,7 +92,9 @@ class ChatFragment : Fragment() {
         var nextIsNote = false
         var todoList = mutableListOf<Todo>()
         var nextIsTodo = false
-        val callPermission = arrayOf(Manifest.permission.CALL_PHONE,Manifest.permission.READ_CONTACTS)
+        var nextIsYoda = false
+        var nextIsAnswer = false
+        var answer = " "
 
         //Json
         val jsonFileString = getJsonDataFromAsset(requireContext(), "intents.json")
@@ -149,7 +151,8 @@ class ChatFragment : Fragment() {
                         var intent = Intent(context, LoginActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                         requireActivity().startActivity(intent)
-                        Toast.makeText(context, "You Clicked : " + item.title, Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(context, "You Clicked : " + item.title, Toast.LENGTH_SHORT).show()
+                        activity?.overridePendingTransition(R.anim.fade_in,R.anim.fade_out)
                     }
 
                 }
@@ -291,6 +294,47 @@ class ChatFragment : Fragment() {
                             chatInterface.smoothScrollToPosition(messageAdapter.itemCount - 1)
                             Input.setText("")
                             nextIsNote = false
+                        }
+                        else if(nextIsYoda){
+                            val message = Chats(
+                                Input.text.toString(),
+                                true
+                            )
+                            yodaApiCall(Input.text.toString()){yodaApi ->
+                                var responseYoda = if(!yodaApi.contents?.translated.isNullOrEmpty()){
+                                    Chats(yodaApi.contents?.translated.toString(),false)
+                                }else{
+                                    Chats("Understand I can not",false)
+                                }
+                                requireActivity().runOnUiThread {
+                                    responseMessageList.add(message)
+                                    responseMessageList.add(responseYoda)
+                                    messageAdapter.notifyDataSetChanged()
+                                    chatInterface.smoothScrollToPosition(messageAdapter.itemCount - 1)
+                                    Input.setText("")
+                                    nextIsYoda = false
+                                }
+                            }
+                        }
+                        else if(nextIsAnswer){
+                            val message = Chats(
+                                Input.text.toString(),
+                                true
+                            )
+
+                            val responseQuiz = if(answer.equals(Input.text.toString(),true)){
+                                Chats("That is correct!\n You sure are as smart as you sound",false)
+                            }
+                            else{
+                                Chats("That is incorrect, looks like I've won\nThe correct answer is $answer",false)
+                            }
+                            responseMessageList.add(message)
+                            responseMessageList.add(responseQuiz)
+                            messageAdapter.notifyDataSetChanged()
+                            chatInterface.smoothScrollToPosition(messageAdapter.itemCount - 1)
+                            Input.setText("")
+                            nextIsAnswer = false
+
                         }
                         else if(nextIsTodo){
                             var newTodo = Todo(
@@ -697,6 +741,26 @@ class ChatFragment : Fragment() {
                                         }
                                         else if(tag == "todo" && modelOutput[0].max()!! > 0.9f){
                                             nextIsTodo = true
+                                        }
+                                        else if(tag == "yoda" && modelOutput[0].max()!! > 0.9f){
+                                            nextIsYoda=true
+                                        }
+                                        else if(tag == "quiz" && modelOutput[0].max()!! > 0.9f){
+                                            jeopardyApiCall(){jeopardyApi ->
+                                                if(!jeopardyApi.question.isNullOrEmpty()){
+                                                    responseTwo.textMessage = jeopardyApi.question
+                                                    answer = jeopardyApi.answer.toString()
+                                                    nextIsAnswer=true
+                                                }else{
+                                                    responseTwo.textMessage = "Unable to fetch the question now"
+                                                }
+                                                requireActivity().runOnUiThread {
+                                                    Input.setText("")
+                                                    responseMessageList.add(responseTwo)
+                                                    messageAdapter.notifyDataSetChanged()
+                                                    chatInterface.smoothScrollToPosition(messageAdapter.itemCount - 1)
+                                                }
+                                            }
                                         }
                                     }
                                 }

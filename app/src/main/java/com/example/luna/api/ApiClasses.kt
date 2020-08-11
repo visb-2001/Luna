@@ -14,3 +14,11 @@ class LocationApi(val woeid:Int?)
 class WeatherApi(val consolidated_weather:List<WeatherAttributes>)
 
 class WeatherAttributes(val weather_state_name:String?, val weather_state_abbr:String?, val the_temp:Float?, val humidity:Float?)
+
+//Yoda
+class YodaApi(val contents: Contents?)
+
+class  Contents(val translated: String?)
+
+//Jeopardy
+class JeopardyApi(val answer:String?, val question:String?)
