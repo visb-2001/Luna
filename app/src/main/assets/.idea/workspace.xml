@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bad4e698-b068-4957-b324-05a4a8b51a9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intents.json" beforeDir="false" afterPath="$PROJECT_DIR$/intents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.tflite" beforeDir="false" afterPath="$PROJECT_DIR$/model.tflite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.h5" beforeDir="false" afterPath="$PROJECT_DIR$/test.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/JobService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/JobService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/LoaderActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/LoaderActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/Receiver.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/Service.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/api/ApiClasses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/api/ApiClasses.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/api/ApiHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/api/ApiHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/fragments/ChatFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/fragments/ChatFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/fragments/LoginFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/fragments/LoginFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/fragments/SignupFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/fragments/SignupFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../res/layout/fragment_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../res/layout/fragment_signup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../res/layout/fragment_signup.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,22 +70,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1596373996075" />
-    <state width="1515" height="213" key="GridCell.Tab.0.bottom" timestamp="1597156500241">
+    <state width="1515" height="213" key="GridCell.Tab.0.bottom" timestamp="1597163136316">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1597156500241" />
-    <state width="1515" height="213" key="GridCell.Tab.0.center" timestamp="1597156500240">
+    <state width="1515" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1597163136316" />
+    <state width="1515" height="213" key="GridCell.Tab.0.center" timestamp="1597163136316">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1597156500240" />
-    <state width="1515" height="213" key="GridCell.Tab.0.left" timestamp="1597156500240">
+    <state width="1515" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1597163136316" />
+    <state width="1515" height="213" key="GridCell.Tab.0.left" timestamp="1597163136315">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1597156500240" />
-    <state width="1515" height="213" key="GridCell.Tab.0.right" timestamp="1597156500241">
+    <state width="1515" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1597163136315" />
+    <state width="1515" height="213" key="GridCell.Tab.0.right" timestamp="1597163136316">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1597156500241" />
+    <state width="1515" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1597163136316" />
     <state x="462" y="149" width="611" height="536" key="find.popup" timestamp="1597094545518">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageButton
+import android.widget.Switch
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.luna.R
@@ -32,6 +33,7 @@ class TodoAdapter(
         RecyclerView.ViewHolder(itemView) {
         var todoText: TextView = itemView.findViewById(R.id.todoText)
         var box: CheckBox = itemView.findViewById(R.id.checkBox)
+        var persist: Switch = itemView.findViewById(R.id.persist)
     }
 
     override fun getItemViewType(position: Int): Int {
@@ -103,6 +105,18 @@ class TodoAdapter(
                 ref.child("todo").setValue(todo)
             }
 
+        }
+
+        holder.persist.setOnCheckedChangeListener { buttonView, isChecked ->
+            var currentPos = holder.adapterPosition
+            todo[currentPos].persist = isChecked
+            Thread {
+                Thread.sleep(500)
+                TodoDatabase.getInstance(context).todoDao().updateTodo(todo[currentPos])
+                Log.d("heylo",todo.last().todoText + " " +todo.last().isChecked.toString()+ " " +todo.last().position.toString())
+            }.start()
+            val ref = FirebaseDatabase.getInstance().getReference("/users/${FirebaseAuth.getInstance().uid}")
+            ref.child("todo").setValue(todo)
         }
     }
 

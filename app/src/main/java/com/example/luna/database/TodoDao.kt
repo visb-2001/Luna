@@ -16,6 +16,9 @@ interface TodoDao {
     @Query("select * from Todo ORDER BY position ASC")
     fun readTodo() : LiveData<List<Todo>>
 
+    @Query("select * from Todo WHERE persist = 0")
+    fun readNonPersistTodo() : List<Todo>
+
     @Query("select count(*) from Todo WHERE isChecked = 0 ")
     fun todoNumber() : Int
 

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:background="#212121">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Todo"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/input_field"
+        android:hint="Todo"
+        android:paddingLeft="25dp"
+        android:paddingTop="7dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="7dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/save"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/submit_field"
+        android:fontFamily="@font/montserrat"
+        android:hapticFeedbackEnabled="true"
+        android:text="Save"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/white" tools:targetApi="lollipop"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

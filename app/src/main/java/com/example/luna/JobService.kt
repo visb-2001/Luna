@@ -32,7 +32,7 @@ import java.time.temporal.TemporalAccessor
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 class JobService : JobService() {
     private val channelId = "i.apps.notifications"
-    private val description = "Test notification"
+    private val description = "notification"
     private var jobCancelled = false
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onStartJob(params: JobParameters): Boolean {
@@ -54,7 +54,9 @@ class JobService : JobService() {
             var dateDiff = ChronoUnit.DAYS.between(date,LocalDate.now())
             if(dateDiff > 0){
                 Thread{
-                    TodoDatabase.getInstance(this).clearAllTables()
+                    TodoDatabase.getInstance(this).todoDao().readNonPersistTodo().forEach { todo ->
+                        TodoDatabase.getInstance(this).todoDao().deleteTodo(todo)
+                    }
                     val uid = FirebaseAuth.getInstance().uid
                     if(!uid.isNullOrEmpty()){
                         FirebaseDatabase.getInstance().getReference("/users/$uid/todo").setValue(null)

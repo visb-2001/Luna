@@ -135,6 +135,7 @@ class MainActivity : AppCompatActivity() {
         fragmentList.add(SketchFragment())
         adapter.addFragment(fragmentList)
         viewPager.adapter = adapter
+        viewPager.offscreenPageLimit = 4
         tabs.setupWithViewPager(viewPager)
 
 
@@ -180,6 +181,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
 
     @RequiresApi(Build.VERSION_CODES.N)
     fun Scheduler(){

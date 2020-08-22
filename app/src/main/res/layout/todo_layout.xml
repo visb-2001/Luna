@@ -30,5 +30,15 @@
         android:layout_toEndOf="@+id/checkBox">
     </TextView>
 
+    <Switch
+        android:id="@+id/persist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/input_field"
+        android:checked="false">
+
+    </Switch>
+
 
 </RelativeLayout>

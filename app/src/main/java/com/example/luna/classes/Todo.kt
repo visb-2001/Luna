@@ -11,6 +11,7 @@ class Todo (todoText: String,isChecked: Boolean){
     var todoText: String = todoText
     var isChecked: Boolean = isChecked
     var position: Int = 0
+    var persist: Boolean = false
 
     constructor(): this("",false)
 }

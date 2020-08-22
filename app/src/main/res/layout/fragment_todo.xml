@@ -33,6 +33,19 @@
             android:src="@drawable/todo"
             android:text="@string/notes"
             android:textColor="#FF1744" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:rotation="45"
+            android:src="@drawable/delete"
+            android:focusable="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"/>
     </RelativeLayout>
 
 </FrameLayout>
