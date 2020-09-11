@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="bad4e698-b068-4957-b324-05a4a8b51a9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/adapters/TodoAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/adapters/TodoAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/classes/Todo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/classes/Todo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/fragments/ChatFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/fragments/ChatFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/fragments/SignupFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/fragments/SignupFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/example/luna/fragments/TodoFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/example/luna/fragments/TodoFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

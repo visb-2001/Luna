@@ -429,7 +429,8 @@ class ChatFragment : Fragment() {
         else if(nextIsTodo){
             var newTodo = Todo(
                 userInput,
-                false
+                false,
+                0
             )
             Thread{
                 TodoDatabase.getInstance(

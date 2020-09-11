@@ -21,6 +21,9 @@ import androidx.annotation.RequiresApi
 import com.example.luna.MainActivity
 import com.example.luna.R
 import com.example.luna.classes.User
+import com.example.luna.database.NotesDatabase
+import com.example.luna.database.SketchDatabase
+import com.example.luna.database.TodoDatabase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
@@ -93,6 +96,12 @@ class SignupFragment : Fragment() {
                         val user = User(uid, username)
                         ref.setValue(user)
                             .addOnSuccessListener {
+                                Thread{
+                                    TodoDatabase.getInstance(requireContext()).clearAllTables()
+                                    NotesDatabase.getInstance(requireContext()).clearAllTables()
+                                    SketchDatabase.getInstance(requireContext()).clearAllTables()
+                                }.start()
+
                                 val intent = Intent (activity, MainActivity::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 activity?.startActivity(intent)

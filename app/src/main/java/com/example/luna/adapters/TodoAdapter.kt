@@ -48,6 +48,7 @@ class TodoAdapter(
         parent: ViewGroup,
         viewType: Int
     ): CustomViewHolder {
+
         return CustomViewHolder(
             LayoutInflater.from(parent.context)
                 .inflate(viewType, parent, false)
@@ -63,11 +64,12 @@ class TodoAdapter(
         if(todo[position].isChecked){
             holder.box.isChecked = true
             holder.todoText.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
-           // var tempTodo = todo[position]
-           // todo.removeAt(position)
-           // todo.add(tempTodo)
-            //notifyDataSetChanged()
         }
+        else{
+            holder.box.isChecked = false
+            holder.todoText.paintFlags = Paint.ANTI_ALIAS_FLAG
+        }
+
 
         holder.box.setOnClickListener {
             var currentPos = holder.adapterPosition
@@ -122,7 +124,9 @@ class TodoAdapter(
 
     fun updateData(todoList: MutableList<Todo>){
         todo = todoList
-        notifyDataSetChanged()
+        //notifyDataSetChanged()
     }
+
+
 
 }

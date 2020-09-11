@@ -40,6 +40,7 @@ class   TodoFragment : Fragment() {
     var todoList = mutableListOf<Todo>()
     lateinit var todoAdapter : TodoAdapter
     lateinit var todoPop: Dialog
+    var firstTime = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -69,9 +70,11 @@ class   TodoFragment : Fragment() {
                     Toast.makeText(requireContext(),"Please enter a todo to add", Toast.LENGTH_SHORT).show()
                 }
                 else{
+                    firstTime = true
                     var newTodo = Todo(
                         todoPop.inputText.text.toString(),
-                        false
+                        false,
+                        0
                     )
                     Thread{
                         TodoDatabase.getInstance(
@@ -112,6 +115,10 @@ class   TodoFragment : Fragment() {
                 Observer<List<Todo>> { todo -> // update the UI here
                     todoList = todo as MutableList<Todo>
                     todoAdapter.updateData(todoList)
+                    if(firstTime){
+                        todoAdapter.notifyDataSetChanged()
+                        firstTime = false
+                    }
                 })
         }
     }
